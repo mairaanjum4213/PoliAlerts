@@ -42,7 +42,7 @@
       class="flex flex-wrap items-center justify-between w-full py-3 lg:py-0 lg:px-4 text-lg text-gray-700  xl:rounded-full bg-white "
     >
       <div>
-        <a href="./Home.html">  
+        <a href="./index.html">  
           <svg
           class="px-5"
             width="200"
@@ -137,7 +137,7 @@
           d="M4 6h16M4 12h16M4 18h16"
         />
       </svg>
-      <div class="w-full xl:flex xl:items-center xl:w-auto px-5" id="menu">
+      <div class="hidden w-full xl:flex xl:items-center xl:w-auto px-5" id="menu">
         <ul
             class="font-semibold text-base text-gray-700 gap-4 xl:flex items-center xl:justify-between py-5"
           >
@@ -220,7 +220,7 @@
       class="flex flex-wrap items-center justify-between w-full py-3 lg:py-0 lg:px-4 text-lg text-gray-700 bg-white"
     >
       <div>
-        <a href="./Home.html">
+        <a href="./index.html">
           <svg
           class="px-5"
             width="200"
@@ -315,7 +315,7 @@
           d="M4 6h16M4 12h16M4 18h16"
         />
       </svg>
-      <div class="w-full xl:flex xl:items-center px-5 xl:w-auto" id="menu">
+      <div class="hidden w-full xl:flex xl:items-center px-5 xl:w-auto" id="menu">
         <ul
           class="font-semibold text-base text-gray-700 gap-4 xl:flex items-center xl:justify-between py-5"
         >
@@ -845,10 +845,6 @@
     </div>
 
     <script>
-      document.getElementById('menu-button').addEventListener('click', function () {
-      var menu = document.getElementById('menu'); 
-      menu.classList.toggle('hidden');
-    });
     window.addEventListener('scroll', function() {
       const navDefault = document.getElementById('header1');
       const navScrolled = document.getElementById('header2');
@@ -872,6 +868,40 @@
       }
     });
     </script>
+
+    <script>
+ 
+  document.getElementById('menu-button').addEventListener('click', function () {
+    var menu = document.getElementById('menu'); 
+    menu.classList.toggle('hidden');
+  });
+
+  var menuItems = document.querySelectorAll('#menu a');
+  menuItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      var menu = document.getElementById('menu'); 
+      menu.classList.add('hidden'); 
+    });
+  });
+
+  //hide when click outside of menu
+  document.addEventListener('click', function(event) {
+    var menu = document.getElementById('menu');
+    var menuButton = document.getElementById('menu-button');
+    
+    if (!menu.contains(event.target) && event.target !== menuButton) {
+      menu.classList.add('hidden'); 
+    }
+  });
+
+  //initially hide menu
+  if (window.innerWidth <= 768) {
+    var menu = document.getElementById('menu');
+    menu.classList.add('hidden');
+  }
+</script>
+
+ 
     
   </body>
 </html>
