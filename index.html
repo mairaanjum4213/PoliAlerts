@@ -160,7 +160,7 @@
 
         <div>
           <a
-            class="hideButton inline  mx-3 sm:mx-5 font-semibold cursor-pointer lg:hidden block text-sm text-blackText hover:underline"
+            class="hideButton inline mx-3 font-semibold cursor-pointer lg:hidden block text-sm text-blackText hover:underline"
             href="./DemoBooking.html"
             >Book a demo</a
           >
@@ -169,7 +169,7 @@
             id="menu-button"
             height="30"
             width="30"
-            class="inline mr-4 cursor-pointer lg:hidden block"
+            class="inline cursor-pointer lg:hidden block"
             fill="none"
             viewBox="0 0 24 24"
             stroke="#2468cd"
@@ -468,7 +468,7 @@
     <!--Hero section-->
     <div class="hidden lg:block relative">
       <div
-        class="absolute top-0 text-whiteText top-[50%] z-30 2xl:w-[48%] xl:w-[64%] w-[70%]  lg:px-10 xl:pl-24 xl:pr-[4.75rem]"
+        class="absolute top-0 text-whiteText top-[25%] lg:top-[50%] z-30 2xl:w-[48%] xl:w-[64%] w-[70%] px-5 lg:px-10 xl:pl-24 xl:pr-[4.75rem]"
       >
         <h1 class="text-5xl leading-[4rem] font-bold">
           Real-time legislative alerts and policy tracking
@@ -484,20 +484,23 @@
       />
     </div>
 
-    
-      <img
-        class="lg:hidden block h-full w-full"
-        src="./assets/home/old-city-hall-toronto-buildlings.png"
-        alt="old-city-hall-toronto-buildlings"
-      />
 
-      <div class="lg:hidden block flex flex-col px-5 bg-backgroundGray py-8">
-        <h1 class="text-[2.375rem] text-whiteText font-bold leading-[3.25rem]">
-         Real-time legislative alerts and policy tracking
-        </h1>
-        <p class="text-lg my-5 text-whiteText leading-[1.875rem]">
-          Instant policy updates delivered to your inbox
-        </p>
+      <div class="relative md:h-[38rem] h-full w-full lg:hidden block">
+        <img
+          class="h-full w-full object-cover"
+          src="./assets/home/Hero-mobile.png"
+          alt="old-city-hall-toronto-buildlings"
+        />
+      
+      
+        <div class="absolute inset-0 flex flex-col justify-center px-5">
+          <h1 class="text-[2.375rem] text-white font-bold leading-[3.25rem] md:text-5xl md:leading-[4rem]">
+            Real-time legislative alerts and policy tracking
+          </h1>
+          <p class="text-lg my-5 text-white leading-[1.875rem]">
+            Instant policy updates delivered to your inbox
+          </p>
+        </div>
       </div>
 
     <section class="md:my-16 my-8 h-full px-5 lg:px-10 xl:px-24">
@@ -576,8 +579,8 @@
             class="p-4 md:w-[60px] flex justify-center items-center rounded-full bg-backgroundLightGray md:h-[60px]"
           >
             <svg
-              width="25"
-              height="25"
+              width="30"
+              height="30"
               id="Layer_2"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 47 49"
@@ -673,7 +676,7 @@
           </h3>
         </section>
 
-        <section class="group flex gap-5 items-center">
+        <section class="group flex gap-5 items-center mt-4">
           <div
             class="w-[10px] flex justify-center items-center rounded-full bg-blueButton group-hover:bg-blueHover group-hover:translate-x-[0.9rem] duration-500 h-[10px]"
           ></div>
@@ -777,7 +780,7 @@
           </div>
         </div>
 
-        <div class="relative ">
+        <div class="relative">
           <img
             class="z-10 h-[70rem]"
             src="./assets/home/architectural-close-up-view-of-building.png"
@@ -873,26 +876,29 @@
         </div>
       </div>
 
-      <img
-        class="lg:hidden block"
-        src="./assets/home/architectural-close-up-view-of-building.png"
-        alt="architectural-close-up-view-of-building"
-      />
-      <div class="lg:hidden block flex flex-col px-5 bg-backgroundGray py-10">
-        <h1 class="text-[2.375rem] text-whiteText font-bold leading-[3.25rem]">
-          Be the smartest person in the room with PoliAlerts
-        </h1>
-        <p class="text-lg my-5 text-whiteText leading-[1.875rem]">
-          Reach out today to find out how PoliAlerts can enhance your policy and
-          communication strategies.
-        </p>
-        <button
+      <div class="relative md:h-[38rem] h-full w-full lg:hidden block">
+        <img
+          class="h-full w-full object-cover"
+          src="./assets/home/Bottom-mobile.png"
+          alt="old-city-hall-toronto-buildlings"
+        />
+      
+      
+        <div class="absolute inset-0 flex flex-col justify-center px-5">
+          <h1 class="text-[2.375rem] text-white font-bold leading-[3.25rem] md:text-5xl md:leading-[4rem]">
+            Be the smartest person in the room with PoliAlerts
+          </h1>
+          <p class="text-lg my-5 text-whiteText leading-[1.875rem]">
+            Reach out today to find out how PoliAlerts can enhance your policy and
+            communication strategies.
+          </p>
+          <button
           class="text-blackText text-base font-semibold bg-white w-fit py-4 px-8 rounded-full hover:bg-transparent hover:border hover:border-white hover:text-white"
         >
           <a href="./DemoBooking.html"> Schedule a call</a>
         </button>
+        </div>
       </div>
-
 
     </section>
 <!--  -->
@@ -1122,7 +1128,7 @@
           </div>
         </footer>
         <hr class="w-[95%] border-white mb-5 border-opacity-15" />
-        <p class="text-sm text-grayText">
+        <p class="text-sm text-grayText pb-8 pt-3">
           © 2024 PoliAlerts. All rights reserved.
         </p>
     </div>
