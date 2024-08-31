@@ -304,6 +304,7 @@
   <section class="px-5 lg:px-10 xl:px-24 lg:my-16 my-8">
   <h2 class="font-bold text-3xl md:text-[2.125rem] md:leading-[3rem] leading:[2.625rem] text-blackText mb-5">Share your questions and our team will get back to you soon</h1>
   <p class="text-sm md:text-base text-clifford md:leading-7 leading-[1.625rem]">Fields marked with an asterisk are mandatory.</p>
+  <form action="https://formspree.io/f/xanwvgqn" method="POST">
   <div class="grid md:grid-cols-2 md:gap-x-24 gap-y-5 gap-x-10 grid-cols-1 my-5">
       <section>
           <label class="block text-sm md:text-base md:leading-7 leading-[1.625rem] mt-5 mb-4 text-clifford " for="name">Name*</label>
@@ -320,12 +321,13 @@
   </div>
   <section>
       <label class="block text-sm md:text-base md:leading-7 leading-[1.625rem] mt-8 mb-4 text-clifford" for="message">Inquiry*</label>
-      <textarea rows="7" class="rounded-xl w-full py-2 px-3 border border-blueButton outline-none" name="message" id="message"></textarea>
+      <textarea rows="7" class="rounded-xl w-full py-2 px-3 border border-blueButton outline-none" name="inquiry" id="message"></textarea>
       <p id="inquiryError" class="text-warn  text-base my-2" style="display: none;">Please complete the field</p>
   </section>
-  <button class="flex my-8 mb-8 justify-start rounded-full w-fit py-3 px-14 bg-blueButton text-whiteText hover:bg-blueHover text-base font-semibold" onclick="validateForm()">
+  <button type="submit" class="flex my-8 mb-8 justify-start rounded-full w-fit py-3 px-14 bg-blueButton text-whiteText hover:bg-blueHover text-base font-semibold" onclick="validateForm()">
       Submit
   </button>
+</form>
   </section>
 
     <!--Footer  -->
