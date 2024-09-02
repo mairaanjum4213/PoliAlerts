@@ -311,7 +311,8 @@
       <section class="my-2">
           <div class="accordion flex items-center  justify-between border-b border-b-grayLine">
               <h3 class="font-bold text-xl leading-[1.875rem] md:text-[1.625rem] md:leading-[2.375rem] py-6 text-blackText">What is PoliAlerts?</h3>
-              <p class="px-1 md:text-5xl text-3xl text-blueButton">+</p>
+              <p class="toggle-symbol px-1 md:text-5xl text-3xl text-blueButton">+</p>
+              <p class="toggle-symbol hidden px-1 md:text-6xl text-4xl text-blueButton">-</p>
           </div>
           
           <div class="panel hidden pb-3 text-clifford text-base leading-[1.75rem]">
@@ -324,7 +325,8 @@
       <section class="my-2">
           <div class="accordion flex items-center  justify-between border-b border-b-grayLine">
               <h3 class="font-bold text-xl leading-[1.875rem] md:text-[1.625rem] md:leading-[2.375rem] py-6 text-blackText">How does PoliAlerts work?</h3>
-              <p class="px-1 md:text-5xl text-3xl text-blueButton">+</p>
+              <p class="toggle-symbol px-1 md:text-5xl text-3xl text-blueButton">+</p>
+              <p class="toggle-symbol hidden px-1 md:text-6xl text-4xl text-blueButton">-</p>
           </div>
           
           <div class="panel hidden pb-3 text-clifford text-base leading-[1.75rem]">
@@ -335,7 +337,8 @@
       <section class="my-2">
         <div class="accordion flex items-center  justify-between border-b border-b-grayLine">
             <h3 class="font-bold text-xl leading-[1.875rem] md:text-[1.625rem] md:leading-[2.375rem] py-6 text-blackText">What are the benfits of using PoliAlerts?</h3>
-            <p class="px-1 md:text-5xl text-3xl text-blueButton">+</p>
+            <p class="toggle-symbol px-1 md:text-5xl text-3xl text-blueButton">+</p>
+            <p class="toggle-symbol hidden px-1 md:text-6xl text-4xl text-blueButton">-</p>
         </div>
         
         <div class="panel hidden pb-3 text-clifford text-base leading-[1.75rem]">
@@ -346,7 +349,8 @@
       <section class="my-2">
           <div class="accordion flex items-center  justify-between border-b border-b-grayLine">
               <h3 class="font-bold  text-xl leading-[1.875rem] md:text-[1.625rem] md:leading-[2.375rem] py-6 text-blackText">Can I customize my alerts?</h3>
-              <p class="px-1 md:text-5xl text-3xl text-blueButton">+</p>
+              <p class="toggle-symbol px-1 md:text-5xl text-3xl text-blueButton">+</p>
+              <p class="toggle-symbol hidden px-1 md:text-6xl text-4xl text-blueButton">-</p>
           </div>
           
           <div class="panel hidden pb-3 text-clifford text-base leading-[1.75rem]">
@@ -357,7 +361,8 @@
       <section class="my-2">
           <div class="accordion flex items-center  justify-between border-b border-b-grayLine">
               <h3 class="font-bold text-xl leading-[1.875rem] md:text-[1.625rem] md:leading-[2.375rem] py-6 text-blackText">Who is it for?</h3>
-              <p class="px-1 md:text-5xl text-3xl text-blueButton">+</p>
+              <p class="toggle-symbol px-1 md:text-5xl text-3xl text-blueButton">+</p>
+              <p class="toggle-symbol hidden px-1 md:text-6xl text-4xl text-blueButton">-</p>
           </div>
           
           <div class="panel hidden pb-3 text-clifford text-base leading-[1.75rem]">
@@ -369,7 +374,8 @@
       <section class="my-2">
           <div class="accordion flex items-center justify-between border-b border-b-grayLine">
               <h3 class="font-bold text-xl leading-[1.875rem] md:text-[1.625rem] md:leading-[2.375rem] py-6 text-blackText">How do I get started with  PoliAlerts?</h3>
-              <p class="px-1 md:text-5xl text-3xl text-blueButton">+</p>
+              <p class="toggle-symbol px-1 md:text-5xl text-3xl text-blueButton">+</p>
+              <p class="toggle-symbol hidden px-1 md:text-6xl text-4xl text-blueButton">-</p>
           </div>
           
           <div class="panel hidden pb-3 text-clifford text-base leading-[1.75rem]">
@@ -900,9 +906,17 @@
               const panel = this.nextElementSibling;
               const isOpen = !panel.classList.contains("hidden");
  
-              const symbol = this.querySelector("p:last-child");
-              symbol.textContent = isOpen ? "+" : "-";
-              symbol.style.fontSize = isOpen ? "48px" : "72px"; 
+              const symbols = this.querySelectorAll(".toggle-symbol");
+              if (isOpen){
+                symbols[0].classList.remove("hidden"); // Show "+"
+                symbols[1].classList.add("hidden"); // Hide "-"
+
+              }
+              else{
+                symbols[0].classList.add("hidden"); // Hide "+"
+                symbols[1].classList.remove("hidden"); // Show "-"
+              }
+           
       
               // Remove border from question and add to answer, or vice versa
               if (isOpen) {
