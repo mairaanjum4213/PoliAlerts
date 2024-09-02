@@ -339,11 +339,11 @@
 
 
   <div class="flex gap-4 md:flex-row flex-col my-8">
-  <button  type="submit" class="flex  justify-start rounded-full w-fit py-3 px-14 bg-blueButton text-whiteText hover:bg-blueHover text-base font-semibold" onclick="validateForm()">
+  <button  type="submit" class="flex  justify-start rounded-full w-fit py-3 px-14 bg-blueButton text-whiteText hover:bg-blueHover text-base font-semibold" onclick="return validateForm()">
       Send message
   </button>
 
-  <a href="https://calendly.com/pixllabs/polialerts-demo" class="flex justify-start rounded-full w-fit py-3 px-14 border border-blueButton text-blueButton font-semibold" onclick="validateForm()">
+  <a href="https://calendly.com/pixllabs/polialerts-demo" class="flex justify-start rounded-full w-fit py-3 px-14 border border-blueButton text-blueButton font-semibold" >
     Book a Call
   </a>
 </div>
@@ -866,11 +866,7 @@
               isValid = false;
           }
   
-          // If the form is valid, submit it
-          if (isValid) {
-              // Perform form submission (e.g., send data to the server)
-              alert('Form submitted successfully!');
-          }
+         return isValid;
       }
   </script>
    <script>
